@@ -22,14 +22,14 @@ namespace GGGeralt.Managers
 
         private void ResetBars()
         {
-            healthSlider.maxValue = thing.health.maxValue;
+            healthSlider.maxValue = thing.health.maxValue.Value;
             thing.health.Reset();
             UpdateBars();
         }
         public void UpdateBars()
         {
             healthSlider.value = thing.health.currentValue;
-            healthText.text = $"{thing.health.currentValue}/{thing.health.maxValue}";
+            healthText.text = $"{thing.health.currentValue}/{thing.health.maxValue.Value}";
         }
     }
 }
