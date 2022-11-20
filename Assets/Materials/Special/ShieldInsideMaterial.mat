@@ -7,26 +7,31 @@ Material:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: ShieldMaterial
-  m_Shader: {fileID: -6465566751694194690, guid: dcef1b11f7c97284c83e695fca56d02e, type: 3}
+  m_Name: ShieldInsideMaterial
+  m_Shader: {fileID: -6465566751694194690, guid: 03bb9801f10c6534da25aeba6b2346e6, type: 3}
   m_ValidKeywords:
+  - _RECEIVE_SHADOWS_OFF
   - _SPECULAR_SETUP
   - _SURFACE_TYPE_TRANSPARENT
   m_InvalidKeywords: []
-  m_LightmapFlags: 2
+  m_LightmapFlags: 1
   m_EnableInstancingVariants: 0
-  m_DoubleSidedGI: 0
+  m_DoubleSidedGI: 1
   m_CustomRenderQueue: 3000
   stringTagMap:
     RenderType: Transparent
   disabledShaderPasses:
-  - SHADOWCASTER
   - DepthOnly
+  - SHADOWCASTER
   m_SavedProperties:
     serializedVersion: 3
     m_TexEnvs:
     - _Grid:
-        m_Texture: {fileID: 2800000, guid: 6ba8cb7987acf4a438492af5d954a1ec, type: 3}
+        m_Texture: {fileID: 2800000, guid: 09b1eb17490eba24a8a5abb2c2ab6c6f, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _Texture:
+        m_Texture: {fileID: 2800000, guid: 09b1eb17490eba24a8a5abb2c2ab6c6f, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - unity_Lightmaps:
@@ -44,28 +49,35 @@ Material:
     m_Ints: []
     m_Floats:
     - _AlphaClip: 0
-    - _Blend: 0
+    - _Blend: 2
     - _CastShadows: 0
-    - _Cull: 0
-    - _DstBlend: 10
+    - _Cull: 1
+    - _DepthOffset: 0
+    - _DstBlend: 1
+    - _Fill: 0.01
     - _Offset: 2.67
     - _Power: 3.47
     - _QueueControl: 0
     - _QueueOffset: 0
-    - _ReceiveShadows: 1
+    - _ReceiveShadows: 0
+    - _RotationSpeed: 0.1
+    - _ScrollSpeed: 0.66
     - _SrcBlend: 5
     - _Surface: 1
     - _WorkflowMode: 0
-    - _ZTest: 4
+    - _ZTest: 2
     - _ZWrite: 0
     - _ZWriteControl: 0
     - _fill: 0.01
     - _frequency: 5
     - _scrollspeed: 0.05
     m_Colors:
-    - _Color: {r: 1, g: 0, b: 0, a: 0}
+    - _Color: {r: 0, g: 1, b: 0.70317864, a: 0}
     - _Emission: {r: 0.48781192, g: 4.546875, b: 4.9245777, a: 0}
+    - _GridSize: {r: 15, g: 15, b: 0, a: 0}
+    - _IntersectionColor: {r: 0, g: 1, b: 0.8300319, a: 0}
     - _Power: {r: 0, g: 5, b: 0, a: 0}
+    - _Tiling: {r: 10, g: 10, b: 0, a: 0}
     - _color2: {r: 0, g: 0.5660378, b: 0.1742946, a: 0}
   m_BuildTextureStacks: []
 --- !u!114 &5401370171960595533

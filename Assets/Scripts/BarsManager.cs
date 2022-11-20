@@ -12,24 +12,24 @@ namespace GGGeralt.Managers
         [SerializeField] Slider healthSlider;
         [SerializeField] TextMeshProUGUI healthText;
         [SerializeField] Slider manaSlider;
-        private Thing thing;
+        private CreatureBase creature;
 
-        public void SetManager(Thing thing)
+        public void SetManager(CreatureBase thing)
         {
-            this.thing = thing;
+            creature = thing;
             ResetBars();
         }
 
         private void ResetBars()
         {
-            healthSlider.maxValue = thing.health.maxValue.Value;
-            thing.health.Reset();
+            healthSlider.maxValue = creature.health.maxValue.Value;
+            creature.health.Reset();
             UpdateBars();
         }
         public void UpdateBars()
         {
-            healthSlider.value = thing.health.currentValue;
-            healthText.text = $"{thing.health.currentValue}/{thing.health.maxValue.Value}";
+            healthSlider.value = creature.health.currentValue;
+            healthText.text = $"{creature.health.currentValue}/{creature.health.maxValue.Value}";
         }
     }
 }

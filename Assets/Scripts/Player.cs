@@ -8,7 +8,6 @@ namespace GGGeralt.Creatures
     {
         public static Player Instance { get; private set; }
 
-
         void Awake()
         {
             if (Instance != null && Instance != this)

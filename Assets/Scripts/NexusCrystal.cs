@@ -5,7 +5,7 @@ using System.Collections.Generic;
 using UnityEngine;
 
 [RequireComponent(typeof(BarsManager))]
-public class NexusCrystal : BuildingBase
+public class NexusCrystal : MonoBehaviour
 {
     public static NexusCrystal Instance { get; private set; }
 

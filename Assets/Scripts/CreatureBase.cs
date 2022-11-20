@@ -4,14 +4,37 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-namespace GGGeralt.Creatures
+public class CreatureBase : MonoBehaviour
 {
-    [RequireComponent(typeof(BarsManager))]
-    public class CreatureBase : Thing
-    {
-        [Header("Creature Stats")]
-        public int speed = 5;
+    public int speed = 5;
 
-      
+    [Header("All things stats")]
+    public ChangeableStat health;
+
+    [Space]
+
+    [Header("All things managers")]
+    public BarsManager barsManager;
+
+    private void Awake()
+    {
+        barsManager = GetComponent<BarsManager>();
+        health.Reset();
     }
+    private void Start()
+    {
+        barsManager.SetManager(this);
+    }
+
+    public void TakeDamage(int value)
+    {
+        health.Decrease(value);
+        barsManager.UpdateBars();
+    }
+    public void Heal(int value)
+    {
+        health.Increase(value);
+        barsManager.UpdateBars();
+    }
+
 }

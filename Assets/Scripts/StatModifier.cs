@@ -9,15 +9,16 @@ namespace GGGeralt.Stats
     public enum modType
     {
         Flat,
-        Multiplicative,
+        PrecentageAdditive,
+        PrecentageMultiplicative,
     }
     [Serializable]
     public class StatModifier
     {
-        public float value;
+        public int value;
         public modType type;
 
-        public StatModifier(float value, modType type)
+        public StatModifier(int value, modType type)
         {
             this.value = value;
             this.type = type;
