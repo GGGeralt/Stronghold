@@ -1,4 +1,5 @@
 using GGGeralt.Stats;
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -11,7 +12,7 @@ public class MonsterGate : MonoBehaviour
     [SerializeField] Stat manaPerSecond;
 
 
-    [SerializeField] Creature enemy;
+    [SerializeField] Creature[] creaturesToSpawn;
     [SerializeField] Transform world;
 
     [SerializeField] UnityEvent levelUp;
@@ -29,11 +30,19 @@ public class MonsterGate : MonoBehaviour
 
     IEnumerator SpawnWave()
     {
+        Creature creature;
         while (true)
         {
             yield return new WaitForSeconds(waveTimer);
-
-            Instantiate(enemy, transform.position, Quaternion.identity, world);
+            if (UnityEngine.Random.Range(0, 2) % 2 == 0)
+            {
+                creature = creaturesToSpawn[0];
+            }
+            else
+            {
+                creature = creaturesToSpawn[1];
+            }
+            Instantiate(creature, transform.position, Quaternion.identity, world);
 
             Debug.Log("EMENIES SPAWNED");
         }

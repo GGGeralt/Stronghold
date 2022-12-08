@@ -51,7 +51,7 @@ GameObject:
   - component: {fileID: 1849605072763389991}
   - component: {fileID: 6583642815762175824}
   m_Layer: 0
-  m_Name: Goblin
+  m_Name: Goblin Smasher
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -101,7 +101,7 @@ MonoBehaviour:
   attackRange: 2
   focusInSightRange: 0
   focusInAttackRange: 0
-  focus: 0
+  focus: 1
   playerLayer:
     serializedVersion: 2
     m_Bits: 256
@@ -197,7 +197,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: d13b0b7a889dd0149bac0724ab1ab11a, type: 2}
+  - {fileID: 2100000, guid: c03ca155771ebe34096cd5d03dbc9c46, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
